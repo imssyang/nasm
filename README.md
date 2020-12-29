@@ -1,2 +1,2 @@
 # nasm
-/opt/nasm
+https://nasm.us
