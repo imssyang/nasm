@@ -1,0 +1,6 @@
+
+./autogen.sh
+./configure --prefix=/opt/nasm --sysconfdir=/opt/nasm/conf 
+make
+make install
+

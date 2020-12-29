@@ -1,0 +1,63 @@
+
+
+❯ ./autogen.sh
++ recheck=false
++ [ x = x--recheck ]
++ AUTOCONF=autoconf
++ AUTOMAKE=automake
++ ACLOCAL=aclocal
++ AUTOHEADER=autoheader
++ mkdir -p autoconf autoconf/helpers config
++ automake --print-libdir
++ autolib=/usr/share/automake-1.16
++ test ! x/usr/share/automake-1.16 = x
++ test -f /usr/share/automake-1.16/install-sh
++ test -f /usr/share/automake-1.16/install-sh
++ sed -n -r -e s/^(scriptver(|sion)|timestamp)=['"]?([^'"]+).*$/\3/p /usr/share/automake-1.16/install-sh autoconf/helpers/install-sh
++ sort --check=quiet
++ test 0 -ne 0
++ test -f /usr/share/automake-1.16/compile
++ test -f /usr/share/automake-1.16/compile
++ sed -n -r -e s/^(scriptver(|sion)|timestamp)=['"]?([^'"]+).*$/\3/p /usr/share/automake-1.16/compile autoconf/helpers/compile
++ sort --check=quiet
++ test 0 -ne 0
++ test -f /usr/share/automake-1.16/config.guess
++ test -f /usr/share/automake-1.16/config.guess
++ sed -n -r -e s/^(scriptver(|sion)|timestamp)=['"]?([^'"]+).*$/\3/p /usr/share/automake-1.16/config.guess autoconf/helpers/config.guess
++ sort --check=quiet
++ test 0 -ne 0
++ test -f /usr/share/automake-1.16/config.sub
++ test -f /usr/share/automake-1.16/config.sub
++ sed -n -r -e s/^(scriptver(|sion)|timestamp)=['"]?([^'"]+).*$/\3/p /usr/share/automake-1.16/config.sub autoconf/helpers/config.sub
++ sort --check=quiet
++ test 0 -ne 0
++ mv -f autoconf/aclocal.m4 autoconf/aclocal.m4.old
++ mkdir -p autoconf/m4.old autoconf/m4
++ mv -f autoconf/m4/pa_add_cflags.m4 autoconf/m4/pa_add_flags.m4 autoconf/m4/pa_add_headers.m4 autoconf/m4/pa_add_ldflags.m4 autoconf/m4/pa_arg_bool.m4 autoconf/m4/pa_arg_disabled.m4 autoconf/m4/pa_arg_enabled.m4 autoconf/m4/pa_c_typeof.m4 autoconf/m4/pa_check_bad_stdc_inline.m4 autoconf/m4/pa_func_attribute.m4 autoconf/m4/pa_func_attribute_error.m4 autoconf/m4/pa_func_snprintf.m4 autoconf/m4/pa_func_vsnprintf.m4 autoconf/m4/pa_have_func.m4 autoconf/m4/pa_libext.m4 autoconf/m4/pa_sym.m4 autoconf/m4.old/
++ pwd
++ ACLOCAL_PATH=/opt/nasm/archive/source/nasm-2.15.05/autoconf/m4.old
++ export ACLOCAL_PATH
++ aclocal --install --output=autoconf/aclocal.m4 -I autoconf/m4
+aclocal: installing 'autoconf/m4/pa_add_cflags.m4' from '/opt/nasm/archive/source/nasm-2.15.05/autoconf/m4.old/pa_add_cflags.m4'
+aclocal: installing 'autoconf/m4/pa_add_flags.m4' from '/opt/nasm/archive/source/nasm-2.15.05/autoconf/m4.old/pa_add_flags.m4'
+aclocal: installing 'autoconf/m4/pa_add_headers.m4' from '/opt/nasm/archive/source/nasm-2.15.05/autoconf/m4.old/pa_add_headers.m4'
+aclocal: installing 'autoconf/m4/pa_add_ldflags.m4' from '/opt/nasm/archive/source/nasm-2.15.05/autoconf/m4.old/pa_add_ldflags.m4'
+aclocal: installing 'autoconf/m4/pa_arg_bool.m4' from '/opt/nasm/archive/source/nasm-2.15.05/autoconf/m4.old/pa_arg_bool.m4'
+aclocal: installing 'autoconf/m4/pa_arg_disabled.m4' from '/opt/nasm/archive/source/nasm-2.15.05/autoconf/m4.old/pa_arg_disabled.m4'
+aclocal: installing 'autoconf/m4/pa_arg_enabled.m4' from '/opt/nasm/archive/source/nasm-2.15.05/autoconf/m4.old/pa_arg_enabled.m4'
+aclocal: installing 'autoconf/m4/pa_c_typeof.m4' from '/opt/nasm/archive/source/nasm-2.15.05/autoconf/m4.old/pa_c_typeof.m4'
+aclocal: installing 'autoconf/m4/pa_check_bad_stdc_inline.m4' from '/opt/nasm/archive/source/nasm-2.15.05/autoconf/m4.old/pa_check_bad_stdc_inline.m4'
+aclocal: installing 'autoconf/m4/pa_func_attribute.m4' from '/opt/nasm/archive/source/nasm-2.15.05/autoconf/m4.old/pa_func_attribute.m4'
+aclocal: installing 'autoconf/m4/pa_func_attribute_error.m4' from '/opt/nasm/archive/source/nasm-2.15.05/autoconf/m4.old/pa_func_attribute_error.m4'
+aclocal: installing 'autoconf/m4/pa_func_snprintf.m4' from '/opt/nasm/archive/source/nasm-2.15.05/autoconf/m4.old/pa_func_snprintf.m4'
+aclocal: installing 'autoconf/m4/pa_func_vsnprintf.m4' from '/opt/nasm/archive/source/nasm-2.15.05/autoconf/m4.old/pa_func_vsnprintf.m4'
+aclocal: installing 'autoconf/m4/pa_have_func.m4' from '/opt/nasm/archive/source/nasm-2.15.05/autoconf/m4.old/pa_have_func.m4'
+aclocal: installing 'autoconf/m4/pa_libext.m4' from '/opt/nasm/archive/source/nasm-2.15.05/autoconf/m4.old/pa_libext.m4'
+aclocal: installing 'autoconf/m4/pa_sym.m4' from '/opt/nasm/archive/source/nasm-2.15.05/autoconf/m4.old/pa_sym.m4'
++ test ! -f autoconf/aclocal.m4
++ rm -rf autoconf/aclocal.m4.old autoconf/m4.old
++ autoheader -B autoconf
++ autoconf -B autoconf
++ rm -rf autom4te.cache config.log config.status config/config.h Makefile
++ false
+
